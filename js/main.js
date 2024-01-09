@@ -99,3 +99,23 @@
     
 })(jQuery);
 
+// Contact Form Validation
+function contact_validation()
+{
+    var name_box = document.getElementById('name');
+    var email_box = document.getElementById('email'); 
+    var subject_box = document.getElementById('subject');
+    var message_box = document.getElementById('message');
+
+    if(name_box.value == "" || email_box.value == "" || subject_box.value == "" || message_box.value == "")
+   {
+     alert("You must enter characters in each field")
+     return false;
+   }
+
+   if(name_box.value.length < 6 || email_box.value.length < 10 || subject_box.value.length < 3 || message_box.value.length < 10 )
+  {
+    alert ("You must enter a valid detail")
+    return false;
+  }
+}
